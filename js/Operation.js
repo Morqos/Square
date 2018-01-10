@@ -15,8 +15,8 @@ function operationClass(){
     }
 
     this.calculateOperation = function(){
-        this.operandOne = Math.floor(Math.random()*10+1)+10; // Random number from 11 to 19
-        this.operandTwo = Math.floor(Math.random()*10+1)+10;
+        this.operandOne = Math.floor(Math.random()*9)+11; // Random number from 11 to 19
+        this.operandTwo = Math.floor(Math.random()*9)+11;
         this.result = this.operandOne*this.operandTwo;
     }
 
