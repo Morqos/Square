@@ -41,9 +41,6 @@ function loadImages(){
         {trackType: TRACK_STOP_OTHER, theFile: "track_stop_other.png"}              // 9
         ];
 
-
-    picsToLoad = imageList.length;
-
     beginLoadingImage(redSquarePic, "redSquare.png"); // The image of the red Square
     beginLoadingImage(blueSquarePic, "blueSquare.png"); // The image of the blue Square
     beginLoadingImage(redWinningPic, "red_wins.png"); // The image of the red win
@@ -51,6 +48,8 @@ function loadImages(){
 
     beginLoadingImage(introPlaySelected, "intro_play_selected.png");
     beginLoadingImage(introPlayUnselected, "intro_play_unselected.png");
+    
+    picsToLoad = imageList.length;
     
     for(var i=0; i<imageList.length; i++){
         loadImageForTrackCode(imageList[i].trackType, imageList[i].theFile);
