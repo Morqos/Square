@@ -64,7 +64,10 @@ function squareResultHandling(whichSquare){
 
 function resetForNewMatch(){
     for(var i=0; i<arrayButtons.length; i++){
-        arrayButtons[i].doorsToDraw = 0;
+        arrayButtons[i].switchDoors = false;
+        arrayButtons[i].released = true;
+        arrayButtons[i].openCloseDoors();
+        arrayButtons[i].applyToButtonsAssociated();
     }
     resetForNewOperation();
 }
