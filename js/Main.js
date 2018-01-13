@@ -23,7 +23,7 @@ SUONI: (Implementare per ultimo)
 var canvas, canvasContext;
 
 var intro_song = new Audio('sounds/intro_song.mp3');
-var gameplay_song = new Audio('sounds/gameplay_song.mp3');
+var gameplay_song = new Audio('sounds/RLD10.mp3');
 var playPressed = false;
 var gameStarted = false;
 
