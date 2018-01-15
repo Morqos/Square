@@ -40,7 +40,6 @@ function keySet(keyEvent, whichSquare, setTo) {
     if (keyEvent.keyCode == whichSquare.controlKeyDown) {
         whichSquare.keyHeld_Reverse = setTo;
     }
-    if(setTo == false) whichSquare.checkNotReleased = true;
 }
 
 
@@ -52,7 +51,16 @@ function keyPressed(evt) {
 
 function keyReleased(evt) {
     keySet(evt, redSquare, false);
+    if(evt.keyCode == KEY_LEFT_ARROW || evt.keyCode == KEY_UP_ARROW ||
+        evt.keyCode == KEY_RIGHT_ARROW || evt.keyCode == KEY_DOWN_ARROW){
+            redSquare.checkNotReleased = true;
+    }
+
     keySet(evt, blueSquare, false);
+    if(evt.keyCode == KEY_A || evt.keyCode == KEY_W ||
+        evt.keyCode == KEY_D || evt.keyCode == KEY_S){
+            blueSquare.checkNotReleased = true;
+    }
     evt.preventDefault();
 }
 
