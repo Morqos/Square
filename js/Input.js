@@ -69,8 +69,8 @@ function updateMousePos(evt){
     var rect = canvas.getBoundingClientRect();
     var root = document.documentElement;
 
-    mouseX = evt.clientX - rect.left - root.scrollLeft;
-    mouseY = evt.clientY - rect.top - root.scrollTop;
+    mouseX = evt.clientX - rect.left;
+    mouseY = evt.clientY - rect.top;
 
     if(mouseX > 250 && mouseX < 550 &&
     mouseY > 300 && mouseY < 500 &&
